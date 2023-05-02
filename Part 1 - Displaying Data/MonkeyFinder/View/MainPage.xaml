@@ -23,15 +23,20 @@
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="model:Monkey">
-                <HorizontalStackLayout Padding="10">
+                <HorizontalStackLayout Padding="10"
+                                       Spacing="10">
                     <Image Source="{Binding Image}"
                            HeightRequest="100"
                            WidthRequest="100"
                            Aspect="AspectFill"/>
-                    <VerticalStackLayout Padding="10" Spacing="4" VerticalOptions="Center">
-                        <Label Text="{Binding Name}" FontSize="24"/>
-                        <Label Text="{Binding Location}" FontSize="12"/>
-                    </VerticalStackLayout>
+                    <Label VerticalOptions="Center">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} | {1}">
+                                <Binding Path="Name"/>
+                                <Binding Path="Location"/>
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
                 </HorizontalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
