@@ -50,10 +50,8 @@
                 Style="{StaticResource ButtonOutline}"/>
         <ActivityIndicator IsVisible="{Binding IsBusy}"
                            IsRunning="{Binding IsBusy}"
-                           HorizontalOptions="FillAndExpand"
-                           VerticalOptions="CenterAndExpand"
                            Grid.RowSpan="2"
-                           Grid.Column="2"/>
+                           Grid.ColumnSpan="2"/>
         <Button Text="Find Closest"
                 Grid.Column="1"
                 Grid.Row="1"
