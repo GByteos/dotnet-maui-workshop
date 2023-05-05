@@ -57,6 +57,7 @@
                            Grid.RowSpan="2"
                            Grid.ColumnSpan="2"/>
         <Button Text="Find Closest"
+                Command="{Binding GetClosestMonkeyCommand}"
                 Grid.Column="1"
                 Grid.Row="1"
                 Margin="8"
