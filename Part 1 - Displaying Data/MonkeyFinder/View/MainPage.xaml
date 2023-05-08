@@ -20,6 +20,10 @@
             <CollectionView BackgroundColor="Transparent"                            
                             ItemsSource="{Binding Monkeys}"
                             SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical"
+                                     Span="{OnIdiom Desktop=3, Default=1}"/>
+                </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Monkey">
                         <Grid Padding="10">
